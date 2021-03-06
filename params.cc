@@ -1,7 +1,7 @@
 #include "params.h"
 
-#include <cstdint>
 #include <complex>
+#include <cstdint>
 
 char file_name[] = "out.gif";
 
@@ -20,7 +20,6 @@ int delay = 1;
 //so it's either a lot of thin lines or a few thick lines
 long double height_difference = 1;
 
-
 //highlight t mod h = |f(z)| mod h or t mod h = log(|f(z)|) mod h
 //it's sometimes helpful
 bool logarithmic_contour_lines = true;
@@ -31,28 +30,27 @@ int height = 2000;
 
 //bounds of the graphs
 long double x_min = -10;
-long double x_max =  10;
+long double x_max = 10;
 long double y_min = -10;
-long double y_max =  10;
+long double y_max = 10;
 
 //log_2(number of colors)
 int palette_bit_depth = 2;
 
 //colors in r, g, b
 uint8_t colors[] = {
-            0x4f, 0x04, 0x12, // none active
-            0x88, 0x4d, 0xa3, // angle active
-            0x9d, 0xa3, 0x4d //  contour active
-            //the way the program works now, it doesn't check if
-            //both are active
-        };
+    0x4f, 0x04, 0x12, // none active
+    0x88, 0x4d, 0xa3, // angle active
+    0x9d, 0xa3, 0x4d //  contour active
+    //the way the program works now, it doesn't check if
+    //both are active
+};
 
-
-//the function to display. 
+//the function to display.
 std::complex<long double> function(std::complex<long double> z) {
     std::complex<long double> ans = 0;
-    for(long double i=0; i<100; i += 1) {
-        ans += std::pow(std::complex<long double>(i,0),-z);
+    for (long double i = 0; i < 100; i += 1) {
+        ans += std::pow(std::complex<long double>(i, 0), -z);
     }
     return ans;
 }

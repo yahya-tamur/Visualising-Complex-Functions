@@ -1,5 +1,5 @@
-#include <cstdint>
 #include <complex>
+#include <cstdint>
 
 extern char file_name[];
 
@@ -20,6 +20,6 @@ extern long double y_min;
 extern long double y_max;
 
 extern int palette_bit_depth;
-extern uint8_t colors[9]; 
+extern uint8_t colors[9];
 
 std::complex<long double> function(std::complex<long double> z);
