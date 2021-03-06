@@ -46,15 +46,25 @@ of zeroes and orders of poles.
 
 Implementation
 --------------
+
 Usage:
+
 `make` to compile
+
 `./a.out` to run the executable file
+
 `make clean` to remove files created by compilation
 
+
+
 Graphing a given function:
+
 edit params.cc to specify the function and the plot,
+
 run `make` to compile (the whole program won't need to recompile if you only changed params.cc)
+
 run `./a.out` to create the image.
+
 
 
 This uses a cut down version of gifenc.c and gifenc.h from github.com/lecram/gifenc
