@@ -63,12 +63,17 @@ to accomodate debugging tools I was using.
 The rest of the project should still work with the original version, though I haven't tried
 it.
 
-Opening the gif's produced is actually pretty hard. I've had 60% cpu utilisation
-on a nice cpu using eye of gnome, the default ubuntu image viewer. Firefox
-and google chrome use less cpu, but the animation is more choppy.
-You could try to convert it to a video format like mp4, and that might work, but keep in mind that
-that approach will lose quality -- gif's are lossless and can show many isolated, moving pixels without problems. (This
-is probably also why viewing the image is pretty hard).
+Opening the gif's produced is actually pretty hard.
+
+I've been using eog, the default image viewer on ubuntu. That has the benefit of showing more frames
+per second but the disadvantage of having about 60% cpu utilisation on a nice cpu.
+
+I've also tried chrome, firefox, and the windows image viewer. If I had to use those more commonly
+available options, I would probably want to decrease the number of frames in params.cc so the images
+loop faster.
+
+Another option to view these images would be to convert them to a video format like mp4. This will lose quality --
+gif's are lossless, which is probably why it's so hard to view these in the first place.
 
 
 This is something I did in my free time.
