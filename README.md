@@ -72,6 +72,9 @@ I've also tried chrome, firefox, and the windows image viewer. If I had to use t
 available options, I would probably want to decrease the number of frames in params.cc so the images
 loop faster.
 
+When looking at them on chrome (or on github on chrome), the images loop after showing only the first
+few frames. It does at least show the whole loop on firefox and windows image viewer.
+
 Another option to view these images would be to convert them to a video format like mp4. This will lose quality --
 gif's are lossless, which is probably why it's so hard to view these in the first place.
 
