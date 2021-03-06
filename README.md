@@ -10,15 +10,16 @@ often very related and graphing them separately doesn't make that fact obvious.
 This is especially the case when trying to visualize complex differentiable
 functions (or meromorphic functions, or functions with essential singularities etc):
 
+```
 f(a+bi) = a + bi is complex differentiable
 f(a+bi) = a - bi is not
+```
 
 and you can't really tell why from graphing the real and imaginary parts
 separately.
 
 Another way to visualize them is through domain coloring -- assign one color to
 each value of the argument of a complex number (t on z = r e^ti or arctan(b/a) on z = a + bi).
-
 The reason it's color and not white to black or something is because it's nice
 that the color is the same at values 0 and 2pi.
 
@@ -34,7 +35,7 @@ in the range (t-e,t+e) for a given e are highlighted.
 Also, the domain coloring approach doesn't capture the magnitude of the resulting
 complex number very well -- it's sometimes done with contour lines or light-to-dark gradients.
 
-In this approach, again, at time t, points such that t mod h = |f(z)| mod h
+In this approach, similar to the angles, at time t, points such that t mod h = |f(z)| mod h
 for a given h are highlighted.
 
 The contour lines could be static, however, having them move from small to large
@@ -49,31 +50,23 @@ Implementation
 
 Usage:
 
-`make` to compile
-
-`./a.out` to run the executable file
-
-`make clean` to remove files created by compilation
-
-
-
+```
+'make' to compile
+'./a.out' to run the executable file
+'make clean' to remove files created by compilation
+```
 Graphing a given function:
-
+```
 edit params.cc to specify the function and the plot,
-
 run `make` to compile (the whole program won't need to recompile if you only changed params.cc)
-
 run `./a.out` to create the image.
-
-
+```
 
 This uses a cut down version of gifenc.c and gifenc.h from github.com/lecram/gifenc
 
 I removed some optimizations I didn't need, removed windows support, and I think I made a few changes
-to accomodate debugging tools I was using.
-
-The rest of the project should still work with the original version, though I haven't tried
-it.
+to accomodate debugging tools I was using. The rest of the project should still work with the original
+version, though I haven't tried it.
 
 
 Opening the gif's produced is actually pretty hard.
@@ -86,7 +79,7 @@ available options, I would probably want to decrease the number of frames in par
 loop faster.
 
 When looking at them on chrome (or on github on chrome), some images loop before displaying every frame.
-It does at least show the whole loop on firefox and windows image viewer.
+It does show the whole loop on firefox and windows image viewer I think.
 
 Another option to view these images would be to convert them to a video format like mp4. This will lose quality --
 gif's are lossless, which is probably why it's so hard to view these in the first place.
