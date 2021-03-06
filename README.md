@@ -68,14 +68,17 @@ run `./a.out` to create the image.
 
 
 This uses a cut down version of gifenc.c and gifenc.h from github.com/lecram/gifenc
+
 I removed some optimizations I didn't need, removed windows support, and I think I made a few changes
 to accomodate debugging tools I was using.
+
 The rest of the project should still work with the original version, though I haven't tried
 it.
 
+
 Opening the gif's produced is actually pretty hard.
 
-I've been using eog, the default image viewer on ubuntu. That has the benefit of showing more frames
+I've been using eog, the default image viewer on ubuntu. That has the advantage of showing more frames
 per second but the disadvantage of having about 60% cpu utilisation on a nice cpu.
 
 I've also tried chrome, firefox, and the windows image viewer. If I had to use those more commonly
